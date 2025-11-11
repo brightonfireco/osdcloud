@@ -10,4 +10,4 @@ Import-Module OSD -Force
 
 #Start OSDCloudScriptPad
 Write-Host -ForegroundColor Green "Start Windows 11 Imaging"
-Start-OSDPad -RepoOwner brightonfireco -RepoName osdcloud -repofolder Deploy -BrandingTitle 'Brighton Fire Rescue District' -Color Blue -Hide Script
+Start-OSDPad -RepoOwner brightonfireco -RepoName osdcloud -repofolder Deploy -BrandingTitle 'Brighton Fire Rescue District' -Color Red -Hide Script
