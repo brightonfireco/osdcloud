@@ -2,13 +2,8 @@
 #================================================
 #   [PreOS] Update Module
 #================================================
-if ((Get-MyComputerModel) -match 'Virtual') {
-    Write-Host  -ForegroundColor Green "Setting Display Resolution to 1600x"
-    Set-DisRes 1600
-}
-
 Write-Host -ForegroundColor Green "Updating OSD PowerShell Module"
-Install-Module -Name OSD -RequiredVersion 25.11.11.1
+Install-Module -Name OSD
 
 Write-Host  -ForegroundColor Green "Importing OSD PowerShell Module"
 Import-Module OSD -Force
@@ -19,7 +14,7 @@ Import-Module OSD -Force
 $Params = @{
     OSVersion  = "Windows 11"
     OSBuild    = "24H2"
-    OSEdition  = "Enterprise"
+    OSEdition  = "Pro"
     OSLanguage = "en-us"
     OSLicense  = "Volume"
     ZTI        = $true
@@ -100,7 +95,7 @@ $AutopilotOOBEJson = @"
                ],
     "PostAction":  "Restart",
     "Run":  "NetworkingWireless",
-    "Title":  "CEC Autopilot Manual Register"
+    "Title":  "BFR Autopilot Manual Register"
 }
 "@
 

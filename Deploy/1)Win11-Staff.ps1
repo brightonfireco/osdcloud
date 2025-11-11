@@ -2,11 +2,6 @@
 #================================================
 #   [PreOS] Update Module
 #================================================
-if ((Get-MyComputerModel) -match 'Virtual') {
-    Write-Host  -ForegroundColor Green "Setting Display Resolution to 1600x"
-    Set-DisRes 1600
-}
-
 Write-Host -ForegroundColor Green "Updating OSD PowerShell Module"
 Install-Module -Name OSD -RequiredVersion 25.11.11.1
 
@@ -19,7 +14,7 @@ Import-Module OSD -Force
 $Params = @{
     OSVersion = "Windows 11"
     OSBuild = "24H2"
-    OSEdition = "Enterprise"
+    OSEdition = "Pro"
     OSLanguage = "en-us"
     OSLicense = "Volume"
     ZTI = $true
@@ -82,7 +77,7 @@ $OOBEDeployJson | Out-File -FilePath "C:\ProgramData\OSDeploy\OSDeploy.OOBEDeplo
 #  [PostOS] AutopilotOOBE Configuration Staging
 #================================================
 $Serial = Get-WmiObject Win32_bios | Select-Object -ExpandProperty SerialNumber
-$AssignedComputerName = "BF-$Serial"
+$AssignedComputerName = "BFR-$Serial"
 
 Write-Host -ForegroundColor Green "Create C:\ProgramData\OSDeploy\OSDeploy.AutopilotOOBE.json"
 $AutopilotOOBEJson = @"
@@ -103,7 +98,7 @@ $AutopilotOOBEJson = @"
                ],
     "PostAction":  "Restart",
     "Run":  "NetworkingWireless",
-    "Title":  "BF Autopilot Manual Register"
+    "Title":  "BFR Autopilot Manual Register"
 }
 "@
 
