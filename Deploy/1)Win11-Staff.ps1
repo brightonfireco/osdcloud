@@ -82,7 +82,7 @@ $OOBEDeployJson | Out-File -FilePath "C:\ProgramData\OSDeploy\OSDeploy.OOBEDeplo
 #  [PostOS] AutopilotOOBE Configuration Staging
 #================================================
 $Serial = Get-WmiObject Win32_bios | Select-Object -ExpandProperty SerialNumber
-$AssignedComputerName = "CEC-$Serial"
+$AssignedComputerName = "BF-$Serial"
 
 Write-Host -ForegroundColor Green "Create C:\ProgramData\OSDeploy\OSDeploy.AutopilotOOBE.json"
 $AutopilotOOBEJson = @"
