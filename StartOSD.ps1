@@ -1,6 +1,9 @@
 Write-Host -ForegroundColor Green "Starting OSDCloud"
 Start-Sleep -Seconds 5
 
+# Set the module repository
+Set-PSRepository PSGallery -InstallationPolicy Trusted
+
 #Make sure I have the latest OSD Content
 Write-Host -ForegroundColor Green "Updating OSD PowerShell Module"
 Install-Module OSD -Force
