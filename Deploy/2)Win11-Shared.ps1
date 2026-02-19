@@ -84,7 +84,7 @@ $AutopilotOOBEJson = @"
     "Assign":  {
                    "IsPresent":  true
                },
-    "GroupTag":  "Staff",
+    "GroupTag":  "Shared",
     "Hidden":  [
                    "AddToGroup",
                    "AssignedUser",
