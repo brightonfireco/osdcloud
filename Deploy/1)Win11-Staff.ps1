@@ -83,7 +83,7 @@ Write-Host -ForegroundColor Green "Create C:\ProgramData\OSDeploy\OSDeploy.Autop
 $AutopilotOOBEJson = @"
 {
     "AssignedComputerName" : "$AssignedComputerName",
-    "AddToGroup":  "Autopilot - Windows 11",
+    "AddToGroup":  "Autopilot - Device - Staff Win11",
     "Assign":  {
                    "IsPresent":  true
                },
