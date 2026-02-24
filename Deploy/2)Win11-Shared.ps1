@@ -19,8 +19,7 @@ $Params = @{
     OSLicense  = "Volume"
     ZTI        = $true
     Firmware   = $true
-    SetTimeZone = $true
-    WindowsUpdate = $true
+
 }
 Start-OSDCloud @Params
 
