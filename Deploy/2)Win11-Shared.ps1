@@ -21,7 +21,6 @@ $Params = @{
     Firmware   = $true
     SetTimeZone = $true
     WindowsUpdate = $true
-    WindowsUpdateDrivers = $true
 }
 Start-OSDCloud @Params
 
