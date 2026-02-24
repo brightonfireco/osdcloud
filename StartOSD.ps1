@@ -1,6 +1,9 @@
 Write-Host -ForegroundColor Green "Starting OSDCloud"
 Start-Sleep -Seconds 5
 
+Write-Host "Setting Time"
+iex( irm timesync.osdcloud.ch)
+
 # Set the module repository
 Set-PSRepository PSGallery -InstallationPolicy Trusted
 
